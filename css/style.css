@@ -1,0 +1,36 @@
+body{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+h3{
+	font-family: Noto Sans;
+	font-size: 2em;
+	margin: 10px 0;
+}
+p{
+	background-color: black;
+	color: darkgray;
+	margin: 20px;
+	padding: 8px;
+}
+div .principal{
+	margin: 10px 30px;
+}
+a{
+    color: azure;
+}
+#menu-nav > div > a{
+    display: block;
+    padding: 20px;
+    background-color: black;
+}
+#menu-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+#menu-nav > div:nth-child(n) :hover{
+    background: azure;
+
+}

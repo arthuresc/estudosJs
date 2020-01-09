@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Brindes de Luxo - Presentes Corporativos</title>
+  <link rel="stylesheet" type="text/css" href="./css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200|Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav id="menu-nav">
+    <div class="menu-item"><a>EX 1</a></div>
+    <div class="menu-item"><a href="./html/exercicio2.html">EX 2</a></div>
+    <div class="menu-item"><a>EX 3</a></div>
+    <div class="menu-item"><a>EX 4</a></div>
+    <div class="menu-item"><a>EX 5</a></div>
+    <div class="menu-item"><a>EX 6</a></div>
+    <div class="menu-item"><a>EX 7</a></div>
+  </nav>
+  <div class="principal">
+    <label for="entrada-txt"><h3>Digite algo: </h3></label>
+    <input type="text" name="entrada-txt" id="entrada">
+    <input type="button" id="btn-entrada" onclick="print()">
+    <p id="saida"></p>
+  </div>
+</body>
+
+<!-- Aqui vai o javascript, por enquanto -->
+<script>
+
+  var address = {
+    nome: document.getElementById('entrada').value,
+    idade: "28",
+    end: "Avenida Candido Portinari 505",
+    uf: "SP"
+  };
+
+  function print(){
+    /* let entrada = document.getElementById('entrada').value; */
+    /* let saida = document.getElementById('saida').innerHTML ='O ' + entrada + ' fez uma compra de 200 carrinhos.'; */
+    let saida = document.getElementById('saida').innerHTML ='O ' + address.nome + ' reside em ' + address.end + ' e tem ' + address.idade + ' anos de idade.';
+    console.log(saida);
+  };
+
+
+</script>
+
+</html>
