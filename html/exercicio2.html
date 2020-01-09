@@ -49,14 +49,14 @@
 
 	function numPar() {
 		for(i = num1; i <= num2; i++){
-			let par = (i - 1)%2;
+			let par = i % 2;
 			if(par == 0){
 				result.push(i);
 			}
 		};
 
-		let saida = documento.getElementById('saida').innerHTML = result;
-		
+		let saida = document.getElementById('saida').innerHTML = result;
+
 		console.log(String(num1) + String(num2) + '  i = ' + (i = i - 1));
 	};
 
