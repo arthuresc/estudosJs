@@ -3,6 +3,7 @@
 
 <head>
 	<title>Brindes de Luxo - Presentes Corporativos</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="../css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200|Noto+Sans&display=swap" rel="stylesheet">
@@ -31,7 +32,7 @@
 			</label>
 			<input type="text" name="entrada-txt" id="num2">
 		</div>
-		<div class="saida">
+		<div>
 			<input type="button" id="btn-entrada" onclick="numPar()">
 			<p id="saida"></p>
 		</div>
@@ -41,24 +42,21 @@
 
 <!-- Aqui vai o javascript, por enquanto -->
 <script>
-
-	var num1 = parseInt(document.getElementById('num1').value);
-	var num2 = parseInt(document.getElementById('num2').value);
-	var i;
-	var result = [];
-
 	function numPar() {
-		for(i = num1; i <= num2; i++){
+		var i = 0; //o código todo dentro da função faz com que ele fique mais estável e sempre reinicie junto da mesma função
+		var result = [];
+		var num1 = parseInt(document.getElementById("num1").value);
+		var num2 = parseInt(document.getElementById("num2").value);
+		for (i = num1; i <= num2; i++) {
 			let par = i % 2;
-			if(par == 0){
+			if (par === 0) {
 				result.push(i);
 			}
 		};
+		var saida = document.getElementById('saida').innerHTML = result;
 
-		var saida = document.getElementById('saida').innerHTML = (result);
-
-		console.log(String(num1) + String(num2) + '  i = ' + (i = i - 1));
-	};
+		console.log(String(num1) + String(num2) + '  i = ' + i);
+	}
 
 
 </script>
