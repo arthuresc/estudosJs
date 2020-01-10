@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<title>Brindes de Luxo - Presentes Corporativos</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200|Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<nav id="menu-nav">
+		<div class="menu-item"><a>EX 1</a></div>
+		<div class="menu-item"><a>EX 2</a></div>
+		<div class="menu-item"><a>EX 3</a></div>
+		<div class="menu-item"><a>EX 4</a></div>
+		<div class="menu-item"><a>EX 5</a></div>
+		<div class="menu-item"><a>EX 6</a></div>
+		<div class="menu-item"><a>EX 7</a></div>
+	</nav>
+	<div class="principal">
+		<select name="" id="select">
+			<option value="0" class="options" onclick="list()">Arthur</option>
+			<option value="1" class="options" onclick="list()">Isabela</option>
+		</select>
+
+	</div>
+	<p id="saida"></p>
+</body>
+
+<!-- Aqui vai o javascript, por enquanto -->
+<script>
+	var user = {nome:"", skills:[]};
+
+	var users = [
+		{nome: 'Arthur Escalera',
+		skills: ['Javascript', 'React', 'VueJs'],
+		},
+		{nome: 'Isabela Escalera',
+		skills: ['Finanças', 'Relacionamento com Cliente', 'Administração'],
+		}
+	];
+
+	function list(){
+		var i = parseInt(document.getElementById('select').value);
+		for (let skill of users[i].skills){
+			let saida = document.getElementById('saida').innerHTML = "O " + users[i].nome + " possui as habilidades: " + users[i].skills.join(', ');
+			console.log(skill);
+		};		
+	}
+</script>
+
+</html>
