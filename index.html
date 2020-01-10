@@ -29,16 +29,15 @@
 <!-- Aqui vai o javascript, por enquanto -->
 <script>
 
-  var address = {
-    nome: document.getElementById('entrada').value,
-    idade: "28",
-    end: "Avenida Candido Portinari 505",
-    uf: "SP"
-  };
-
   function print(){
     /* let entrada = document.getElementById('entrada').value; */
     /* let saida = document.getElementById('saida').innerHTML ='O ' + entrada + ' fez uma compra de 200 carrinhos.'; */
+    var address = {
+      nome: document.getElementById('entrada').value,
+      idade: "28",
+      end: "Avenida Candido Portinari 505",
+      uf: "SP"
+    };
     let saida = document.getElementById('saida').innerHTML ='O ' + address.nome + ' reside em ' + address.end + ' e tem ' + address.idade + ' anos de idade.';
     console.log(saida);
   };
