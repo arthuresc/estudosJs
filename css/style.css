@@ -40,3 +40,15 @@ a {
 #menu-nav>div:nth-child(n) :hover {
   background: azure;
 }
+
+.red{
+  background: none;
+  font-size: x-large;
+  color: tomato;
+  line-height: 1px;
+}
+#secao{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
