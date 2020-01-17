@@ -19,51 +19,34 @@
 		<div class="menu-item"><a>EX 6</a></div>
 		<div class="menu-item"><a>EX 7</a></div>
 	</nav>
-	<button onclick="criarQuadrado()">1 Quadrado <p class="red" >Vermelho</p></button>
-	<section id="secao">
-
-		<div onmouseover="changeColor(1)" style="width: 100px; height: 100px; background-color: #f0f;"></div>
-
-	</section>
+	<ul id="todo-list">
+		<input type="text" name="enter-text" id="input-text" value="Escreva seu Todo" placeholder="Escreva seu Todo"/>
+		<button onclick="addTodo(document.querySelector('#input-text').value)">Enviar</button>
+		<li>Comprar farinha</li>
+		<li>Compra Pneu</li>
+	</ul>
 </body>
 
 <!-- Aqui vai o javascript, por enquanto -->
 <script>
+	// var triggerTodo = document.querySelector('#input-text').addEventListener('KeyboardEvent', function(){
+	// 	// aqui vai uma função
+	// })
+	// se eu der ENTER ele vai disparar esse trigger
 
-  function criarQuadrado() {
-    var square = document.createElement('section');
-		// square.setAttribute('class', 'redi')
-		square.style.width = '100px';
-		square.style.height = '100px';
-		square.style.backgroundColor = '#f00';
-		// square.onmouseover.style.backgroundColor = newColor;
-		// square.style.backgroundColor = '#f00';
 
-		var print = document.getElementById('secao').appendChild(square);
-		// var print = document.body.appendChild(square);
-		console.log(square);
-		// var redSquare = square.setAttribute('')
-		// redSquare.appendChild
-  }
+	var textTodo = document.querySelector('#input-text').value;
+	var todos = [''];
 
-	function getRandomColor() {
-		var letters = "0123456789ABCDEF";
-		var color = "#";
-		for (var i = 0; i < 6; i++) {
-			color += letters[Math.floor(Math.random() * 16)];
-		}
-		console.log(color);
-		return color;
-	}
-	var newColor = getRandomColor(); // #E943F0
-	
-	function changeColor(num){		
-		if(num == 1){
-			var element1 = document.querySelector('section');
-			element1.style.backgroundColor = newColor;
-			console.log(num);
-		}
-		return num;
+
+	console.log(textTodo + ' texto de teste');
+
+	function addTodo(text){
+		var todoLine = document.createElement('li');
+		var todoList = document.querySelector('#todo-list');
+		todoLine.appendChild(document.createTextNode(text));
+		todoList.appendChild(todoLine).innerHTML; //Essa linha vai para mais embaixo
+		console.log(text + todoLine);
 	}
 
 </script>
