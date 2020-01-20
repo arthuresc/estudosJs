@@ -52,3 +52,47 @@ a {
   flex-wrap: wrap;
   flex-direction: row;
 }
+
+#app-todo{
+  font-family: 'Varela Round', sans-serif;
+  /* background-color: rgb(250, 250, 250); */
+  background-color: rgb(195, 195, 195);
+  max-width: 600px;
+  min-width: 550px;
+  max-height: max-content;
+  /* min-height: 70px; */
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  border-style: outset;
+  /* border: 1px #aff5d8; */
+  box-shadow: 0.1px 0.1px 1px rgba(0,0,0,0.1);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: 
+                      'input submit'
+                      'todos todos';  
+}
+
+#input-todo{
+  border-width: 0 0 1px 0;
+  border-color: rgba(129, 129, 129, 0.1);
+  border-radius: 5px;
+  background-color: rgba(250, 250, 250);
+  padding: 0px 10px 0px 10px;
+  /* width: 65%; */
+  height: 30px;
+  grid-area: input;
+}
+#submit-todo{
+  border: none;
+  border-radius: 5px;
+  padding: 0 25px;
+  line-height: 30px;
+  grid-area: submit;
+
+}
+#todo-list{
+  grid-area: todos;
+}
