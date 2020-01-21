@@ -41,58 +41,114 @@ a {
   background: azure;
 }
 
-.red{
+.red {
   background: none;
   font-size: x-large;
   color: tomato;
   line-height: 1px;
 }
-#secao{
+
+#secao {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-#app-todo{
+#app-todo {
   font-family: 'Varela Round', sans-serif;
-  /* background-color: rgb(250, 250, 250); */
-  background-color: rgb(195, 195, 195);
+  background-color: rgb(158, 122, 224);
+  /* background-color: rgb(195, 195, 195); */
   max-width: 600px;
   min-width: 550px;
   max-height: max-content;
   /* min-height: 70px; */
   border-radius: 20px;
   margin: 20px;
-  padding: 20px;
-  border-style: outset;
+  padding: 20px 20px 25px 20px;
+  /* border-style: outset; */
   /* border: 1px #aff5d8; */
-  box-shadow: 0.1px 0.1px 1px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr auto;
-  grid-template-areas: 
-                      'input submit'
-                      'todos todos';  
+  grid-template-areas: 'input submit' 'todos todos';
 }
 
-#input-todo{
+#input-todo {
   border-width: 0 0 1px 0;
   border-color: rgba(129, 129, 129, 0.1);
   border-radius: 5px;
   background-color: rgba(250, 250, 250);
   padding: 0px 10px 0px 10px;
   /* width: 65%; */
-  height: 30px;
+  height: 40px;
   grid-area: input;
+  margin: 15px 10px 15px 0;
 }
-#submit-todo{
+
+#submit-todo {
   border: none;
   border-radius: 5px;
   padding: 0 25px;
-  line-height: 30px;
+  line-height: 40px;
   grid-area: submit;
-
+  /* background-color: rgb(45, 255, 127); */
+  background-color: rgb(145, 220, 50);
+  color: #fff;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 18px;
+  margin: 15px 0px 15px 0px;
 }
-#todo-list{
+
+#todo-list {
   grid-area: todos;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  /* line-height: 30px; */
+  border-radius: 3px;
+  background-color: #fff;
+  margin: 10px 0;
+  height: 25px;
+}
+.todo .todo-opt{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 70px;
+  padding: 0 0 0 10px;
+  margin: 0 0 0 auto;
+  border-left: solid 1px rgba(129, 129, 129, 0.5) ;
+}
+.todo .todo-opt .check {
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/icons/check.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  cursor: pointer;
+}
+
+.todo .todo-opt .close {
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/icons/close.svg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  cursor: pointer;
+}
+
+.todo .todo-opt div span {
+  display: none;
+}
+.texto{
+  color: #686868;
+  /* font-family: 'Varela Round'; */
 }

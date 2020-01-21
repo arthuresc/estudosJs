@@ -20,30 +20,49 @@
 		<div class="menu-item"><a>EX 7</a></div>
 	</nav>
 	<div id="app-todo">
-		<input type="text" id="input-todo">
+		<input type="text" id="input-todo" placeholder="Escreva o seu Todo..." alt="Escreva o seu Todo" >
 		<button id="submit-todo">Enviar</button>
 		<ul id="todo-list">
-			<li class="todo">Fazer café<a href="#" class="delete-todo">Excluir</a></li>
-			<li class="todo">Comprar Maizena<a href="#" class="delete-todo">Excluir</a></li>
-			
+
+			<li class="todo">
+				
+				<div class="todo-opt">
+					<div class="check">
+						<span>
+							Excluir
+						</span>
+					</div>
+					<div class="close">
+						<span>
+							Excluir
+						</span>
+					</>
+				</div>
+			</li>
+			<li class="todo">
+				<div class="texto">Arthur</div>
+				<div class="todo-opt">
+					<div class="check">
+						<span>
+							Excluir
+						</span>
+					</div>
+					<div class="close" onclick="teste()">
+						<span>
+							Excluir
+						</span>
+					</div>
+				</div>
+			</li>
 		</ul>
-	</div>
-	<path
-	 d="M 256,504 C 119,504 8,393 8,256 8,119 119,8 256,8 393,8 504,119 504,256 504,393 393,504 256,504 Z M 377.6,190.9 a 12,12 0 0 0 0,-17 L 338,134.4 a 12,12 0 0 0 -17,0 L 256,200 190.9,134.4 a 12,12 0 0 0 -17,0 L 134.4,174 a 12,12 0 0 0 0,17 l 65.6,65 -65.6,65.1 a 12,12 0 0 0 0,17 l 39.6,39.6 a 12,12 0 0 0 17,0 l 65,-65.7 65.1,65.6 a 12,12 0 0 0 17,0 L 377.7,338 a 12,12 0 0 0 0,-17 L 312,256 Z"
-	 class="fa-secondary"
-	 id="path2"
-	 style="fill:#ff9d9d;fill-opacity:1"
-	 inkscape:connector-curvature="0"  />
-	<path
-		d="M377.6 321.1a12 12 0 0 1 0 17L338 377.6a12 12 0 0 1-17 0L256 312l-65.1 65.6a12 12 0 0 1-17 0L134.4 338a12 12 0 0 1 0-17l65.6-65-65.6-65.1a12 12 0 0 1 0-17l39.6-39.6a12 12 0 0 1 17 0l65 65.7 65.1-65.6a12 12 0 0 1 17 0l39.6 39.6a12 12 0 0 1 0 17L312 256z"
-		class="fa-primary"
-		id="path4"
-		fill="currentColor"
-		style="fill:#cc3c3c;fill-opacity:1" />
+	</div>	
 </body>
 
 <!-- Aqui vai o javascript, por enquanto -->
 <script>
+	function teste(){
+		alert('Teste feito!');
+	}
 
 </script>
 
