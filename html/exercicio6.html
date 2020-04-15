@@ -2,10 +2,12 @@
 <html lang="pt-br">
 
 <head>
+	<meta charset="UTF-8">
 	<title>Brindes de Luxo - Presentes Corporativos</title>
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="../css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style-draw.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:200|Noto+Sans&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300|Varela+Round&display=swap" rel="stylesheet"> 
 
@@ -20,50 +22,15 @@
 		<div class="menu-item"><a>EX 7</a></div>
 	</nav>
 	<div id="app-todo">
-		<input type="text" id="input-todo" placeholder="Escreva o seu Todo..." alt="Escreva o seu Todo" >
-		<button id="submit-todo">Enviar</button>
+		<input type="text" id="input-todo" placeholder="Escreva o seu Todo..." alt="Escreva o seu Todo" value="Escreva o seu Todo..." >
+		<button id="submit-todo">Adicionar</button>
 		<ul id="todo-list">
 
-			<li class="todo">
-				
-				<div class="todo-opt">
-					<div class="check">
-						<span>
-							Excluir
-						</span>
-					</div>
-					<div class="close">
-						<span>
-							Excluir
-						</span>
-					</>
-				</div>
-			</li>
-			<li class="todo">
-				<div class="texto">Arthur</div>
-				<div class="todo-opt">
-					<div class="check">
-						<span>
-							Excluir
-						</span>
-					</div>
-					<div class="close" onclick="teste()">
-						<span>
-							Excluir
-						</span>
-					</div>
-				</div>
-			</li>
 		</ul>
 	</div>	
 </body>
 
 <!-- Aqui vai o javascript, por enquanto -->
-<script>
-	function teste(){
-		alert('Teste feito!');
-	}
-
-</script>
+<script src="../js/todo.js"></script>
 
 </html>

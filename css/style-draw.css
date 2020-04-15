@@ -1,0 +1,90 @@
+body{
+  background-color: #5e5e5e;
+}
+/* Botão de check */
+.check{
+  width: 24px;
+  height: 24px;
+  background-color: rgb(138, 224, 67);
+  border-radius: 12px;
+  position: relative;
+  /* top: 100px; */
+  /* left: 100px; */
+  cursor: pointer;
+}
+
+.check:before{
+  content: '';
+  width: 12px;
+  height: 3px;
+  background-color: rgb(229, 255, 180);
+  border-radius: 1px;
+  position: absolute;
+  top: 11px;
+  left: 8px;
+  transform: rotate(-45deg);
+}
+.check:after{
+  content: '';
+  width: 7px;
+  height: 3px;
+  background-color: rgb(229, 255, 180);
+  border-radius: 1px;
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  transform: rotate(45deg);
+}
+
+.check:hover:after,
+.check:hover:before{
+  background-color: rgb(138, 224, 67);
+}
+.check:hover{
+  background-color: rgb(229, 255, 180);
+}
+
+/* Botão de fechar */
+.close{
+  width: 24px;
+  height: 24px;
+  background-color: rgba(204, 60, 60, 1);
+  border-radius: 12px;
+  position: relative;
+  /* top: 150px; */
+  /* left: 150px; */
+  cursor: pointer;
+}
+
+.close:before{
+  content: '';
+  width: 14px;
+  height: 3px;
+  background-color: rgb(255, 199, 199);
+  border-radius: 1px;
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  transform: rotate(-45deg);
+}
+
+.close:after{
+  content: '';
+  width: 14px;
+  height: 3px;
+  background-color: rgb(255, 199, 199);
+  border-radius: 1px;
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  transform: rotate(45deg);
+}
+
+.close:hover:before,
+.close:hover:after{
+  background-color: rgba(204, 60, 60, 1);
+}
+
+.close:hover{
+  background-color: rgb(255, 199, 199);
+}
